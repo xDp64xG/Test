@@ -37,7 +37,7 @@ noDebts: true
 # How many blocks can players be away to trade?                      #
 # Set this to -1 if you don't want a maximum trading distance.       #
 ######################################################################
-maxTradingDistance: 15
+maxTradingDistance: -1
 ######################################################################
 # Should it be allowed to trade with players in other worlds?        #
 # If this is set to true, maxTradingDistance will have no effect!    #
@@ -51,6 +51,6 @@ fastTrade: false
 ######################################################################
 # The values used for the "Adds/Removes xyz money" buttons.          #
 ######################################################################
-smallMoneyValue: 1
-mediumMoneyValue: 10
-largeMoneyValue: 100
+smallMoneyValue: 100
+mediumMoneyValue: 1000
+largeMoneyValue: 10000
