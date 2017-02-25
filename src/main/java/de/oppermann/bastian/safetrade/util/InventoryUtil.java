@@ -155,13 +155,13 @@ public class InventoryUtil {
             type = Material.DIAMOND;
         }
         if (money < Main.getInstance().getConfig().getInt("largeMoneyValue") * 10) {
-            type = Material.GOLD_BLOCK;
+            type = Material.PAPER;
         }
         if (money < Main.getInstance().getConfig().getInt("largeMoneyValue")) {
-            type = Material.GOLD_INGOT;
+            type = Material.PAPER;
         }
         if (money < Main.getInstance().getConfig().getInt("mediumMoneyValue")) {
-            type = Material.GOLD_NUGGET;
+            type = Material.PAPER;
         }
         if (money <= 0) {
             type = Material.BARRIER;
@@ -218,21 +218,21 @@ public class InventoryUtil {
                 strMoney = Main.getInstance().getEconomy().format(Main.getInstance().getConfig().getInt("smallMoneyValue"));
             }
 
-            ItemStack addOneMoney = createItemStack(Material.GOLD_NUGGET, (byte) 0,
+            ItemStack addOneMoney = createItemStack(Material.PAPER, (byte) 0,
                     ChatColor.GOLD + messages.getString("button_add_money").replace("{money}", strMoney), addMoneyLore);
 
             strMoney = String.valueOf(Main.getInstance().getConfig().getInt("mediumMoneyValue"));
             if (Main.getInstance().getEconomy() != null) {
                 strMoney = Main.getInstance().getEconomy().format(Main.getInstance().getConfig().getInt("mediumMoneyValue"));
             }
-            ItemStack addTenMoney = createItemStack(Material.GOLD_INGOT, (byte) 0,
+            ItemStack addTenMoney = createItemStack(Material.PAPER, (byte) 0,
                     ChatColor.GOLD + messages.getString("button_add_money").replace("{money}", strMoney), addMoneyLore);
 
             strMoney = String.valueOf(Main.getInstance().getConfig().getInt("largeMoneyValue"));
             if (Main.getInstance().getEconomy() != null) {
                 strMoney = Main.getInstance().getEconomy().format(Main.getInstance().getConfig().getInt("largeMoneyValue"));
             }
-            ItemStack addHundredMoney = createItemStack(Material.GOLD_BLOCK, (byte) 0,
+            ItemStack addHundredMoney = createItemStack(Material.PAPER, (byte) 0,
                     ChatColor.GOLD + messages.getString("button_add_money").replace("{money}", strMoney), addMoneyLore);
 
             String[] clearMoneyLore = messages.getString("button_clear_money_description").split("\n");
